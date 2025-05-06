@@ -1,0 +1,471 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    min-height: 100vh;
+    background: radial-gradient(rgb(205, 213, 217), rgba(156, 243, 243, 0.652));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: medium;
+    color: black;
+}
+
+header main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1600px;
+    margin: 0;
+    padding: 0 40px;
+    background: radial-gradient(circle, rgb(127, 238, 238), rgba(137, 170, 255, 0.526));
+}
+
+header .logo {
+    height: 150px;
+}
+
+.text-with-border {
+    margin: 0;
+    font-size: 300%;
+    color: black;
+    letter-spacing: 0.1px;
+    font-weight: 800;
+    margin-right: 30px;
+    margin-left: 50px;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav li {
+    margin-left: 10px;
+}
+
+header nav a {
+    color: black;
+    text-decoration: none;
+    text-align: right;
+    padding: 10px 5px;
+    border-radius: 5px;
+}
+
+header nav a:hover {
+    background-color: #466b9c;
+}
+
+main {
+    margin: 20px;
+    padding: 20px;
+}
+
+.inicio {
+    background: radial-gradient(azure, white, rgb(215, 247, 247));
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 1100px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    border: 7px solid rgba(255, 255, 255, 0.777);
+}
+
+.inicio h1 {
+    text-align: center;
+    color: black;
+    font-size: 200%;
+}
+
+.socios h2 {
+    margin-top: 70px;
+    text-align: center;
+}
+
+.socios img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin: 10px;
+    background-color: azure;
+}
+
+/* Media queries para diseño responsivo */
+@media (max-width: 1200px) {
+    .text-with-border {
+        font-size: 250%;
+        margin-right: 20px;
+        margin-left: 40px;
+    }
+
+    header main {
+        padding: 0 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    header main {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .text-with-border {
+        font-size: 200%;
+        margin-right: 10px;
+        margin-left: 30px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header nav li {
+        margin-left: 0;
+    }
+
+    header nav a {
+        padding: 10px;
+        text-align: left;
+    }
+
+    .inicio {
+        padding: 15px;
+        max-width: 90%;
+        margin: 10px auto;
+    }
+
+    .inicio h1 {
+        font-size: 180%;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-with-border {
+        font-size: 150%;
+        margin: 0 10px;
+    }
+
+    .inicio {
+        padding: 10px;
+        max-width: 95%;
+    }
+
+    .inicio h1 {
+        font-size: 150%;
+    }
+
+    .socios img {
+        width: 100px;
+        height: 100px;
+    }
+}
+.informaciónempresa {
+    background: radial-gradient(azure, white, rgb(215, 247, 247));
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 1100px;
+    width: 100%;
+    margin: 50px auto;
+    text-align: justify;
+    border: 7px solid rgba(255, 255, 255, 0.777);
+    height: auto;
+}
+.informaciónempresa h1 {
+    text-align: center;
+}
+.servicios {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 0px;
+    justify-content: space-between;
+}
+.texto {
+    border: 7px solid rgba(255, 255, 255, 0.777);
+    height: auto;
+    background: radial-gradient(azure, white, rgb(215, 247, 247));
+}
+.servicios h1 {
+    text-align: center;
+}
+.servicios p {
+    text-align: justify;
+}
+.contenedor-carrusel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+    border: 7px solid rgba(255, 255, 255, 0.777);
+    background: radial-gradient(azure, white, rgb(215, 247, 247));
+    height: 500px;
+    border-radius: 15%;
+    margin-top: 70px;
+}
+.contenedor-carrusel h1 {
+    text-align: center;
+}
+.imagenes {
+    position: relative;
+    width: 560px;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+.imagenes img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+.imagenes img.mostrar {
+    opacity: 1;
+}
+button {
+    background: linear-gradient(to right, rgba(95, 218, 255, 0.5), rgba(208, 192, 246, 0.5));
+    border: none;
+    color: white;
+    padding: 30px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 45%;
+    border: 3px;
+    border-color: black;
+}
+button:hover {
+    background-color: #2980b9;
+}
+button:active {
+    background-color: #1e6b8c;
+}
+.texto {
+    background: radial-gradient(azure, white, rgb(215, 247, 247));
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+    max-width: 700px;
+    width: 50%;
+    margin-right: 5px;
+}
+.imágenes {
+    background: radial-gradient(azure, white, rgb(215, 247, 247));
+    width: 50%;
+    height: 100px;
+    padding: 10px;
+    display: flex;
+    background-color: #5e98c7;
+    border-radius: 15px;
+}
+
+/* Media queries para diseño responsivo */
+@media (max-width: 1200px) {
+    .informaciónempresa {
+        padding: 15px;
+        max-width: 95%;
+    }
+
+    .texto {
+        max-width: 600px;
+        width: 60%;
+    }
+
+    .imágenes {
+        width: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    .informaciónempresa {
+        padding: 10px;
+    }
+
+    .servicios {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .texto {
+        max-width: 80%;
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .imágenes {
+        width: 80%;
+        height: 80px;
+    }
+
+    .contenedor-carrusel {
+        height: 400px;
+        margin: 30px 0;
+    }
+
+    .imagenes {
+        width: 100%;
+        height: 300px;
+    }
+
+    button {
+        padding: 20px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .informaciónempresa {
+        padding: 5px;
+        max-width: 90%;
+    }
+
+    .texto {
+        max-width: 95%;
+        width: 100%;
+        margin: 5px auto;
+    }
+
+    .imágenes {
+        width: 90%;
+        height: 60px;
+    }
+
+    .contenedor-carrusel {
+        height: 300px;
+    }
+
+    .imagenes {
+        width: 100%;
+        height: 250px;
+    }
+
+    button {
+        padding: 15px 15px;
+        font-size: 14px;
+    }
+}
+
+.fichatecnica {
+    display: flex; 
+    margin-left: 10px;
+    justify-content: space-between;
+}
+.textofichatecnica {
+    background-color: #5e98c7;
+    max-width: 600px; 
+    margin: 50px auto; 
+    border-radius: 15px;
+    padding: 20px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: block;
+    align-items: flex-start;
+}
+.imagenfichatecnica {
+    width: 50%;
+    height: 300px;
+    padding: 10px;
+    display: flex;
+    background-color: #5e98c7;
+    border-radius: 15px;
+}
+.contacto {
+    display: flex;
+    margin-left: 50px;
+    justify-content: space-between;
+    margin-top: auto;
+    flex-wrap: wrap; /* Ajuste para flexbox */
+}
+.container {     
+    background: radial-gradient(azure, white, rgb(215, 247, 247));
+    padding: 20px; 
+    border-radius: 15px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    max-width: 500px; 
+    width: 80%; 
+    border: 4px solid white;
+    margin: 10px auto; /* Ajuste de margen */
+} 
+.container h1 { 
+    text-align: center; 
+    margin-bottom: 20px;
+    color: black; 
+} 
+.container label { 
+    display: block; 
+    margin-bottom: 5px; 
+    font-weight: bold; 
+    text-align: center; 
+} 
+.container input[type="text"], 
+.container input[type="email"], 
+.container input[type="tel"], 
+.container textarea { 
+    width: 100%; 
+    padding: 10px; 
+    margin-bottom: 15px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+} 
+.container input[type="submit"] { 
+    width: 100%; 
+    padding: 10px; 
+    background: radial-gradient(rgb(63, 205, 205), rgb(4, 127, 127)); 
+    color: black; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    font-size: 16px; 
+} 
+.container input[type="submit"]:hover { 
+    background-color: rgba(94, 8, 8, 0.5); 
+}
+.mapa {
+    background: radial-gradient(azure, white, rgb(215, 247, 247));
+    border-radius: 15px;
+    border: 7px solid rgba(255, 255, 255, 0.777);
+    margin-right: 50px; 
+    height: auto;
+    margin-left: 10px; 
+} 
+.mapa h1 { 
+    text-align: center; 
+}
+
+@media (max-width: 768px) {
+    .contacto {
+        flex-direction: column;
+        margin-left: auto;
+    }
+    .mapa {
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+footer {    background: radial-gradient(circle, 
+    rgba(156, 243, 243, 0.652), 
+    rgb(127, 238, 238), 
+    rgba(137, 170, 255, 0.526));
+    color: black;
+    padding: 10px 0;
+    text-align: center; 
+    position:static; 
+    height: 120px;
+    left: 0;
+    bottom: 0;
+    line-height: 0.8;
+}
